@@ -5,7 +5,7 @@
     <div class="row">
     <div class="col-xs-12">
         <h4>Please log in with your DPaW username and password:</h4>
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="" method="POST">
             {% csrf_token %}
             {% if form.errors %}
                 <div class="alert alert-danger">Sorry, that's not a valid username or password.</div>
