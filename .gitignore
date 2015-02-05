@@ -1,0 +1,5 @@
+*.pyc
+*.sw[op]
+\.orig$
+*.egg-info/
+dist/
