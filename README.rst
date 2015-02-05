@@ -2,6 +2,26 @@
 DPaW Django web template
 ========================
 
+.. image:: https://pypip.in/version/webtemplate-dpaw/badge.svg
+    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
+    :alt: Latest Version
+
+.. image:: https://pypip.in/status/webtemplate-dpaw/badge.svg
+    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
+    :alt: Development Status
+
+.. image:: https://pypip.in/py_versions/webtemplate-dpaw/badge.svg
+    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
+    :alt: Supported Python versions
+
+.. image:: https://pypip.in/license/webtemplate-dpaw/badge.svg
+    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
+    :alt: License
+
+.. image:: https://pypip.in/download/webtemplate-dpaw/badge.svg
+    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
+    :alt: Downloads
+
 This project consists of a basic Django application containing HTML
 templates that provide a starting point for web applications used by the
 `Department of Parks and Wildlife`_. The base template consists of a mobile-friendly HTML5
@@ -28,5 +48,5 @@ The main template blocks are as follows:
 
 .. _Department of Parks and Wildlife: http://www.dpaw.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com/
-.. _Bootstrap 3: https://getbootstrap.com/
+.. _Bootstrap 3: http://getbootstrap.com/
 .. _Bootflat UI kit: https://bootflat.github.io/
