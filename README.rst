@@ -36,9 +36,10 @@ Installation
 ============
 
 #. Install via pip: ``pip install webtemplate-dpaw``
+#. Add ``'webtemplate_dpaw'`` to ``INSTALLED_APPS``
 #. Extend the included base template by placing the following at the head
    of your own templates: ``{% extends "webtemplate_dpaw/base.html" %}``
-#. Place page content within the required blocks.
+#. Place page content within the required blocks (see below).
 
 Included CSS and JavaScript
 ===========================

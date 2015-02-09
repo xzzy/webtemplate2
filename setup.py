@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 install_requires = [
     'Django>=1.6',
 ]
-version = ('0.1rc')
+version = ('0.1')
 
 setup(
     name='webtemplate-dpaw',
@@ -30,7 +30,7 @@ setup(
         'Framework :: Django',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
