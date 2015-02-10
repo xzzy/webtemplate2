@@ -15,6 +15,8 @@ setup(
     name='webtemplate-dpaw',
     version=version,
     install_requires=install_requires,
+    tests_require=install_requires,
+    test_suite='runtests.runtests',
     packages=['webtemplate_dpaw'],
     include_package_data=True,
     author='Ashley Felton',
