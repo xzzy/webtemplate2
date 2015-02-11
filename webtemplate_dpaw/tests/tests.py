@@ -25,8 +25,11 @@ class BaseTemplateTest(SimpleTestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'webtemplate_dpaw/base.html')
-        self.assertContains(response, '<li class="active"><a href="#">Link 1</a></li>')
         self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
+        self.assertNotContains(response, 'Log out')  # No 'log out' text.
+        self.assertContains(response, '<title>Test page</title>')
+        self.assertContains(response, '<a class="navbar-brand" href="/">SITE TITLE</a>')
+        self.assertContains(response, '<li class="active"><a href="#">Link 1</a></li>')
 
     def test_base_template_logged_in(self):
         """Test the base template displays a 'Log out' link for logged-in users.
@@ -36,7 +39,7 @@ class BaseTemplateTest(SimpleTestCase):
         self.assertIn('_auth_user_id', self.client.session)
         response = self.client.get(url)
         self.assertContains(response, '<a id="id_a_logout" href="/logout/">Log out</a>')
-        self.assertNotContains(response, 'Log in')
+        self.assertNotContains(response, 'Log in')  # No 'log in' text.
 
     def test_base_template_extend(self):
         """Test that the base template renders, with some content overridden.
