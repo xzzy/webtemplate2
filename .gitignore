@@ -1,5 +1,7 @@
+dist/
+*.egg/
+*.egg
 *.pyc
 *.sw[op]
-\.orig$
+*.orig
 *.egg-info/
-dist/

@@ -7,18 +7,31 @@ from django.conf import settings
 import django
 
 
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
+# Minimal Django settings to provide an auth-ready project, plus staticfiles.
 DEFAULT_SETTINGS = dict(
     INSTALLED_APPS=(
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.staticfiles',
         'webtemplate_dpaw',
-        'webtemplate_dpaw.tests',
-        ),
+    ),
     DATABASES={
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3"
-            }
-        },
+        "default": {"ENGINE": "django.db.backends.sqlite3"}
+    },
+    MIDDLEWARE_CLASSES=(
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+    ),
+    ROOT_URLCONF='webtemplate_dpaw.tests.urls',
+    STATIC_URL='/static/',
+    ANONYMOUS_USER_ID=-1,
+    TEMPLATE_DIRS=(os.path.join(BASE_DIR, 'webtemplate_dpaw', 'tests'),),
     SILENCED_SYSTEM_CHECKS=["1_7.W001"],
-    )
+)
 
 
 def runtests():
@@ -39,10 +52,10 @@ def runtests():
     except ImportError:
         from django.test.simple import DjangoTestSuiteRunner
         runner_class = DjangoTestSuiteRunner
-        test_args = ['tests']
+        test_args = ['webtemplate_dpaw.tests']
 
     failures = runner_class(
-        verbosity=2, interactive=True, failfast=False).run_tests(test_args)
+        verbosity=2, interactive=True, failfast=True).run_tests(test_args)
     sys.exit(failures)
 
 

@@ -35,8 +35,12 @@ with some additional styling via the `Bootflat UI kit`_.
 Installation
 ============
 
-#. Install via pip: ``pip install webtemplate-dpaw``
-#. Add ``'webtemplate_dpaw'`` to ``INSTALLED_APPS``
+#. Install via pip: ``pip install webtemplate-dpaw``.
+#. Add ``'webtemplate_dpaw'`` to ``INSTALLED_APPS``.
+#. Ensure that the ``staticfiles`` application is included and configured
+   correctly.
+#. Ensure that you have defined the following named URLs: ``login`` and
+   ``logout`` (this requirement can be overriden, see below).
 #. Extend the included base template by placing the following at the head
    of your own templates: ``{% extends "webtemplate_dpaw/base.html" %}``
 #. Place page content within the required blocks (see below).
@@ -75,6 +79,11 @@ content of your project. The main template content blocks are as follows:
 - ``navbar_links`` - used to define navigation links in the top navbar.
 - ``page_content`` - used to contain the page's main content.
 - ``page_footer`` - used to contain a page footer area.
+- ``navbar_auth`` - used to display either a **Login** or **Logout** link.
+
+Note that the ``navbar_auth`` block contains ``{% url %}`` templatetags with
+named URLs called *login* and *logout*. If this is not required or
+inappropriate for your project, simply override the ``navbar_auth`` block.
 
 In addition, a number of context variables are defined:
 

@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 install_requires = [
     'Django>=1.6',
 ]
-version = ('0.1')
+version = ('0.2')
 
 setup(
     name='webtemplate-dpaw',

@@ -28,8 +28,12 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    {% block navbar_logo %}
                     <img class="navbar-brand hidden-xs" src="{% static 'img/dpaw_logo_small.png' %}">
+                    {% endblock %}
+                    {% block navbar_site_title %}
                     <a class="navbar-brand" href="/">{{ site_title }}</a>
+                    {% endblock %}
                     {% block navbar_button %}
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -48,22 +52,24 @@
                         <li class="active"><a href="#">Link 1</a></li>
                         <li><a href="#">Link 2</a></li>
                         <li><a href="#">Link 3</a></li>
+                        {% block navbar_auth %}
                         {% if user.is_authenticated %}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.username }} <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{% url 'logout' %}">Log out</a></li>
+                                <li><a id="id_a_logout" href="{% url 'logout' %}">Log out</a></li>
                             </ul>
                         </li>
                         {% else %}
-                        <li><a href="{% url 'login' %}">Log in</a></li>
+                        <li><a id="id_a_login" href="{% url 'login' %}">Log in</a></li>
                         {% endif %}
-                        {% endblock %}
+                        {% endblock %}<!-- /navbar_auth -->
+                        {% endblock %}<!-- /navbar_links -->
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        {% endblock %}
+        {% endblock %}<!-- /top_navbar -->
 
         {% block page_content %}{% endblock %}
 
