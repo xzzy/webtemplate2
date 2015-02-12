@@ -60,19 +60,19 @@ The base template currently includes the following CSS and JavaScript assets
 #. Bootflat UI kit 2.0.4 (Bootstrap style extension)
 #. jQuery 2.1.3 (DOM traversal, etc.)
 
-Additional styling can be included by extending the ``base_style`` or
-``base_js`` blocks and calling ``{{ block.super }}``, like so::
+Additional styling can be included using the ``extra_style`` or ``extra_js``
+blocks, like so::
 
     {% load static from staticfiles %}
 
-    {% block base_style %}
+    {% block extra_style %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     {% endblock %}
 
-You can also overide these blocks completely to use completely different
-CSS or JS, or use the ``extra_style`` and ``extra_js`` blocks you don't
-feel like typing ``{{ block.super }}``.
+You can also overide the ``base_style`` and ``base_js`` blocks completely to
+use different CSS or JS libraries. Note that you will also need to replace the
+``top_navbar`` block contents if you replace the base Bootstrap CSS & JS.
 
 Template blocks
 ===============
@@ -81,9 +81,9 @@ The base template contains a number of block tags that are used to render the
 content of your project. The main template content blocks are as follows:
 
 - ``navbar_links`` - used to define navigation links in the top navbar.
+- ``navbar_auth`` - used to display either a **Login** or **Logout** link.
 - ``page_content`` - used to contain the page's main content.
 - ``page_footer`` - used to contain a page footer area.
-- ``navbar_auth`` - used to display either a **Login** or **Logout** link.
 
 Note that the ``navbar_auth`` block contains ``{% url %}`` templatetags with
 named URLs called *login* and *logout*. If this is not required or
@@ -103,8 +103,6 @@ To populate the main content area with a narrow left sidebar and content
 area that fills the whole screen width and will collapse elegantly on
 narrow or mobile displays::
 
-    {% extends "webtemplate_dpaw/base.html" %}
-
     {% block page_content %}
     <div class="container-fluid">
         <div class="row">
@@ -120,8 +118,6 @@ narrow or mobile displays::
 
 To include a right-aligned copyright line in the footer area::
 
-    {% extends "webtemplate_dpaw/base.html" %}
-
     {% block page_footer %}
     <div class="container-fluid">
         <div class="row">
@@ -135,13 +131,16 @@ To include a right-aligned copyright line in the footer area::
 
 To include no navigation links in the top navbar and to prevent the automatic
 "navbar button" from showing on narrow displays, overide the ``navbar_button``
-and ``navbar_links`` blocks::
-
-    {% extends "webtemplate_dpaw/base.html" %}
+and ``navbar_links`` blocks to be empty::
 
     {% block navbar_button %}{% endblock %}
     {% block navbar_links %}{% endblock %}
 
+If you don't want to use the Bootflat UI kit (and reduce your page load), you
+can override the relevant blocks to be empty, like so::
+
+    {% block bootflat_style %}{% endblock %}
+    {% block bootflat_js %}{% endblock %}
 
 .. _Department of Parks and Wildlife: http://www.dpaw.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com/
