@@ -56,9 +56,9 @@ The base template currently includes the following CSS and JavaScript assets
 (served via `JSDelivr`_):
 
 #. Modernizr 2.8.3 (HTML5 polyfills)
-#. Bootstrap 3.3.2 (CSS & JS)
+#. Bootstrap 3.3.5 (CSS & JS)
 #. Bootflat UI kit 2.0.4 (Bootstrap style extension)
-#. jQuery 2.1.3 (DOM traversal, etc.)
+#. jQuery 2.1.4 (DOM traversal, etc.)
 
 Additional styling can be included using the ``extra_style`` or ``extra_js``
 blocks, like so::
