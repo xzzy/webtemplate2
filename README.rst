@@ -33,8 +33,8 @@ HTML5 template with a fixed top navbar containing the DPaW logo, plus static
 assets. The project also contains functional examples of **login** and
 **logged out** templates.
 
-The base template is based upon `HTML5 Boilerplate`_ styled with `Bootstrap 3`_,
-with some additional styling via the `Bootflat UI kit`_.
+The base template is based upon `HTML5 Boilerplate`_, and includes the
+`Bootstrap 3`_ CSS framework.
 
 Installation
 ============
@@ -57,7 +57,6 @@ The base template currently includes the following CSS and JavaScript assets
 
 #. Modernizr 2.8.3 (HTML5 polyfills)
 #. Bootstrap 3.3.5 (CSS & JS)
-#. Bootflat UI kit 2.0.4 (Bootstrap style extension)
 #. jQuery 2.1.4 (DOM traversal, etc.)
 
 Additional styling can be included using the ``extra_style`` or ``extra_js``
@@ -136,14 +135,7 @@ and ``navbar_links`` blocks to be empty::
     {% block navbar_button %}{% endblock %}
     {% block navbar_links %}{% endblock %}
 
-If you don't want to use the Bootflat UI kit (and reduce your page load), you
-can override the relevant blocks to be empty, like so::
-
-    {% block bootflat_style %}{% endblock %}
-    {% block bootflat_js %}{% endblock %}
-
 .. _Department of Parks and Wildlife: http://www.dpaw.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com/
 .. _Bootstrap 3: http://getbootstrap.com/
-.. _Bootflat UI kit: https://bootflat.github.io/
 .. _JSDelivr: http://www.jsdelivr.com/

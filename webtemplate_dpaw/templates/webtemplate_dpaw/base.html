@@ -15,9 +15,6 @@
         {% block base_style %}
         <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.2/css/bootstrap.min.css">
         {% endblock %}
-        {% block bootflat_style %}
-        <link rel="stylesheet" href="{% static 'bootflat/css/bootflat.css' %}">
-        {% endblock %}
         {% block extra_style %}
         <link rel="stylesheet" href="{% static 'css/dpaw-custom.css' %}">
         {% endblock %}
@@ -87,11 +84,6 @@
         {% block base_js %}
         <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
         <script src="//cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        {% endblock %}
-        {% block bootflat_js %}
-        <script src="{% static 'bootflat/js/icheck.min.js' %}"></script>
-        <script src="{% static 'bootflat/js/jquery.fs.selecter.min.js' %}"></script>
-        <script src="{% static 'bootflat/js/jquery.fs.stepper.min.js' %}"></script>
         {% endblock %}
         {% block extra_js %}{% endblock %}
     </body>
