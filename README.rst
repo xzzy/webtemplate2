@@ -2,26 +2,6 @@
 DPaW Django web template
 ========================
 
-.. image:: https://pypip.in/version/webtemplate-dpaw/badge.svg
-    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
-    :alt: Latest Version
-
-.. image:: https://pypip.in/status/webtemplate-dpaw/badge.svg
-    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
-    :alt: Development Status
-
-.. image:: https://pypip.in/py_versions/webtemplate-dpaw/badge.svg
-    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
-    :alt: Supported Python versions
-
-.. image:: https://pypip.in/license/webtemplate-dpaw/badge.svg
-    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
-    :alt: License
-
-.. image:: https://pypip.in/download/webtemplate-dpaw/badge.svg
-    :target: https://pypi.python.org/pypi/webtemplate-dpaw/
-    :alt: Downloads
-
 .. image:: https://drone.io/bitbucket.org/dpaw/webtemplate-dpaw/status.png
     :target: https://drone.io/bitbucket.org/dpaw/webtemplate-dpaw
     :alt: Builds
