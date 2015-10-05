@@ -1,12 +1,22 @@
 body {
   padding-top: 60px;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
+
 .navbar-default {
   background-color: #317589;
   border-color: #255e6e;
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
+  font-weight: 700;
+  font-size: 30px;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #ecf0f1;
