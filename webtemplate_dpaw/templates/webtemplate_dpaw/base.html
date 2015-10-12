@@ -9,11 +9,11 @@
         <meta name="description" content="{{ page_description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block polyfill_js %}
-        <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js"></script>
+        <script async src="//static.dpaw.wa.gov.au/static/libs/modernizr/2.8.3/modernizr.min.js"></script>
         {% endblock %}
         <!-- CSS styling blocks -->
         {% block base_style %}
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//static.dpaw.wa.gov.au/static/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
         {% endblock %}
         {% block extra_style %}
@@ -83,8 +83,8 @@
 
         <!-- JavaScript blocks -->
         {% block base_js %}
-        <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
-        <script src="//cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//static.dpaw.wa.gov.au/static/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="//static.dpaw.wa.gov.au/static/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
         {% endblock %}
         {% block extra_js %}{% endblock %}
     </body>
