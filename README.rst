@@ -33,7 +33,7 @@ Included CSS and JavaScript
 ===========================
 
 The base template currently includes the following CSS and JavaScript assets
-(served via `JSDelivr`_):
+(served via the Department's internal mirror of `CDNJS`_):
 
 #. Modernizr 2.8.3 (HTML5 polyfills)
 #. Bootstrap 3.3.5 (CSS & JS)
@@ -116,6 +116,6 @@ and ``navbar_links`` blocks to be empty::
     {% block navbar_links %}{% endblock %}
 
 .. _Department of Parks and Wildlife: http://www.dpaw.wa.gov.au
-.. _HTML5 Boilerplate: https://html5boilerplate.com/
-.. _Bootstrap 3: http://getbootstrap.com/
-.. _JSDelivr: http://www.jsdelivr.com/
+.. _HTML5 Boilerplate: https://html5boilerplate.com
+.. _Bootstrap 3: https://getbootstrap.com
+.. _CDNJS https://cdnjs.com
