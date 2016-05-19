@@ -2,10 +2,6 @@
 DPaW Django web template
 ========================
 
-.. image:: https://drone.io/bitbucket.org/dpaw/webtemplate-dpaw/status.png
-    :target: https://drone.io/bitbucket.org/dpaw/webtemplate-dpaw
-    :alt: Builds
-
 This project consists of a basic Django application containing HTML
 templates that provide a starting point for web applications used by the
 `Department of Parks and Wildlife`_. The base template consists of a mobile-friendly
