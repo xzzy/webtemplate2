@@ -2,7 +2,6 @@
 
 import os
 import sys
-
 from django.conf import settings
 import django
 
@@ -18,7 +17,7 @@ DEFAULT_SETTINGS = dict(
         'webtemplate_dpaw',
     ),
     DATABASES={
-        "default": {"ENGINE": "django.db.backends.sqlite3"}
+        'default': {'ENGINE': 'django.db.backends.sqlite3'}
     },
     MIDDLEWARE_CLASSES=(
         'django.middleware.common.CommonMiddleware',
@@ -30,7 +29,6 @@ DEFAULT_SETTINGS = dict(
     STATIC_URL='/static/',
     ANONYMOUS_USER_ID=-1,
     TEMPLATE_DIRS=(os.path.join(BASE_DIR, 'webtemplate_dpaw', 'tests'),),
-    SILENCED_SYSTEM_CHECKS=["1_7.W001"],
 )
 
 
@@ -38,9 +36,7 @@ def runtests():
     if not settings.configured:
         settings.configure(**DEFAULT_SETTINGS)
 
-    # Compatibility with Django 1.7's stricter initialization
-    if hasattr(django, 'setup'):
-        django.setup()
+    django.setup()
 
     parent = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, parent)

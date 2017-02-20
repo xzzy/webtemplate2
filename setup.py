@@ -30,6 +30,9 @@ setup(
     keywords=['django', 'html', 'template', 'dpaw'],
     classifiers=[
         'Framework :: Django',
+        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Development Status :: 5 - Production/Stable',
