@@ -14,3 +14,14 @@ class TestPage(TemplateView):
 
 class TestPage2(TestPage):
     template_name = 'test_template.html'
+
+
+class TestInternetPage(TemplateView):
+    template_name = 'webtemplate_dpaw/base_internet.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(TestInternetPage, self).get_context_data(**kwargs)
+        context['page_title'] = 'Test page'
+        context['page_description'] = 'Meta tag page description'
+        context['site_title'] = 'SITE TITLE'
+        return context

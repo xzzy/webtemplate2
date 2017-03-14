@@ -48,3 +48,13 @@ class BaseTemplateTest(SimpleTestCase):
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, '<h1 id="id_hello_world">Hello, World!</h1>')
+
+    def test_internet_template_render(self):
+        """Test that the base_internet template renders with expected content.
+        """
+        url = reverse('test_internet_page')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'webtemplate_dpaw/base_internet.html')
+        self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
+        self.assertNotContains(response, 'Log out')  # No 'log out' text.
