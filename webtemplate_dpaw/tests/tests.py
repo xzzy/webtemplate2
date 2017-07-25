@@ -31,6 +31,19 @@ class BaseTemplateTest(SimpleTestCase):
         self.assertContains(response, '<a class="navbar-brand" href="/">SITE TITLE</a>')
         self.assertContains(response, '<li class="active"><a href="#">Link 1</a></li>')
 
+    def test_base_dbca_template_render(self):
+        """Test that the base_dbca template renders with expected content.
+        """
+        url = reverse('test_dbca_page')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'webtemplate_dpaw/base_dbca.html')
+        self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
+        self.assertNotContains(response, 'Log out')  # No 'log out' text.
+        self.assertContains(response, '<title>Test page</title>')
+        self.assertContains(response, '<a class="navbar-brand" href="/">SITE TITLE</a>')
+        self.assertContains(response, '<li class="active"><a href="#">Link 1</a></li>')
+
     def test_base_template_logged_in(self):
         """Test the base template displays a 'Log out' link for logged-in users.
         """

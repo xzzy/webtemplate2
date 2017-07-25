@@ -7,9 +7,9 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
 install_requires = [
-    'Django>=1.8',
+    'Django>=1.10',
 ]
-version = ('0.4.7')
+version = ('0.4.8')
 
 setup(
     name='webtemplate-dpaw',
@@ -20,19 +20,18 @@ setup(
     packages=['webtemplate_dpaw'],
     include_package_data=True,
     author='Ashley Felton',
-    author_email='asi@dpaw.wa.gov.au',
+    author_email='asi@dbca.wa.gov.au',
     maintainer='Ashley Felton',
-    maintainer_email='asi@dpaw.wa.gov.au',
+    maintainer_email='asi@dbca.wa.gov.au',
     license='Apache License, Version 2.0',
-    url='https://bitbucket.org/dpaw/webtemplate-dpaw',
-    description='Base HTML templates for DPaW Django projects',
+    url='https://github.com/parksandwildlife/webtemplate',
+    description='Base HTML templates for DBCA Django projects',
     long_description=README,
-    keywords=['django', 'html', 'template', 'dpaw'],
+    keywords=['django', 'html', 'template'],
     classifiers=[
         'Framework :: Django',
-        'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
         'Framework :: Django :: 1.10',
+        'Framework :: Django :: 1.11',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Development Status :: 5 - Production/Stable',

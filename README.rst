@@ -1,12 +1,12 @@
 ========================
-DPaW Django web template
+DBCA Django web template
 ========================
 
 This project consists of a basic Django application containing HTML
 templates that provide a starting point for web applications used by the
-`Department of Parks and Wildlife`_. The base template consists of a mobile-friendly
-HTML5 template with a fixed top navbar containing the DPaW logo, plus static
-assets. The project also contains functional examples of **login** and
+`Department`_. The base template consists of a mobile-friendly
+HTML5 template with a fixed top navbar, plus static assets.
+The project also contains functional examples of **login** and
 **logged out** templates.
 
 The base template is based upon `HTML5 Boilerplate`_, and includes the
@@ -111,7 +111,7 @@ and ``navbar_links`` blocks to be empty::
     {% block navbar_button %}{% endblock %}
     {% block navbar_links %}{% endblock %}
 
-.. _Department of Parks and Wildlife: http://www.dpaw.wa.gov.au
+.. _Department: http://www.dbca.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com
 .. _Bootstrap 3: https://getbootstrap.com
 .. _CDNJS https://cdnjs.com
