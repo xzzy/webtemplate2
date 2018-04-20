@@ -15,14 +15,14 @@ The base template is based upon `HTML5 Boilerplate`_, and includes the
 Installation
 ============
 
-#. Install via pip: ``pip install webtemplate-dpaw``.
-#. Add ``'webtemplate_dpaw'`` to ``INSTALLED_APPS``.
+#. Install via pip: ``pip install webtemplate-dbca``.
+#. Add ``'webtemplate_dbca'`` to ``INSTALLED_APPS``.
 #. Ensure that the ``staticfiles`` application is included and configured
    correctly.
 #. Ensure that you have defined the following named URLs: ``login`` and
    ``logout`` (this requirement can be overriden, see below).
 #. Extend the included base template by placing the following at the head
-   of your own templates: ``{% extends "webtemplate_dpaw/base.html" %}``
+   of your own templates: ``{% extends "webtemplate_dbca/base.html" %}``
 #. Place page content within the required blocks (see below).
 
 Included CSS and JavaScript
@@ -31,9 +31,9 @@ Included CSS and JavaScript
 The base template currently includes the following CSS and JavaScript assets
 (served via the Department's internal mirror of `CDNJS`_):
 
-#. Modernizr 2.8.3 (HTML5 polyfills)
-#. Bootstrap 3.3.5 (CSS & JS)
-#. jQuery 2.1.4 (DOM traversal, etc.)
+#. Modernizr (HTML5 polyfills)
+#. Bootstrap 3 (CSS & JS)
+#. jQuery (DOM traversal, etc.)
 
 Additional styling can be included using the ``extra_style`` or ``extra_js``
 blocks, like so::
@@ -114,4 +114,4 @@ and ``navbar_links`` blocks to be empty::
 .. _Department: http://www.dbca.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com
 .. _Bootstrap 3: https://getbootstrap.com
-.. _CDNJS https://cdnjs.com
+.. _CDNJS: https://cdnjs.com

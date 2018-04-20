@@ -2,7 +2,7 @@ from django.views.generic import TemplateView
 
 
 class TestPage(TemplateView):
-    template_name = 'webtemplate_dpaw/base.html'
+    template_name = 'webtemplate_dbca/base.html'
 
     def get_context_data(self, **kwargs):
         context = super(TestPage, self).get_context_data(**kwargs)
@@ -13,7 +13,7 @@ class TestPage(TemplateView):
 
 
 class TestDBCAPage(TemplateView):
-    template_name = 'webtemplate_dpaw/base_dbca.html'
+    template_name = 'webtemplate_dbca/base_dbca.html'
 
     def get_context_data(self, **kwargs):
         context = super(TestDBCAPage, self).get_context_data(**kwargs)
@@ -28,7 +28,7 @@ class TestPage2(TestPage):
 
 
 class TestInternetPage(TemplateView):
-    template_name = 'webtemplate_dpaw/base_internet.html'
+    template_name = 'webtemplate_dbca/base_internet.html'
 
     def get_context_data(self, **kwargs):
         context = super(TestInternetPage, self).get_context_data(**kwargs)

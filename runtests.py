@@ -14,21 +14,31 @@ DEFAULT_SETTINGS = dict(
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.staticfiles',
-        'webtemplate_dpaw',
+        'webtemplate_dbca',
     ),
     DATABASES={
         'default': {'ENGINE': 'django.db.backends.sqlite3'}
     },
-    MIDDLEWARE_CLASSES=(
+    MIDDLEWARE = (
         'django.middleware.common.CommonMiddleware',
         'django.middleware.csrf.CsrfViewMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
     ),
-    ROOT_URLCONF='webtemplate_dpaw.tests.urls',
+    ROOT_URLCONF='webtemplate_dbca.tests.urls',
     STATIC_URL='/static/',
-    ANONYMOUS_USER_ID=-1,
-    TEMPLATE_DIRS=(os.path.join(BASE_DIR, 'webtemplate_dpaw', 'tests'),),
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [os.path.join(BASE_DIR, 'webtemplate_dbca', 'tests')],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.contrib.auth.context_processors.auth',
+                ],
+            },
+        }
+    ]
 )
 
 
@@ -44,11 +54,11 @@ def runtests():
     try:
         from django.test.runner import DiscoverRunner
         runner_class = DiscoverRunner
-        test_args = ['webtemplate_dpaw.tests']
+        test_args = ['webtemplate_dbca.tests']
     except ImportError:
         from django.test.simple import DjangoTestSuiteRunner
         runner_class = DjangoTestSuiteRunner
-        test_args = ['webtemplate_dpaw.tests']
+        test_args = ['webtemplate_dbca.tests']
 
     failures = runner_class(
         verbosity=2, interactive=True, failfast=True).run_tests(test_args)

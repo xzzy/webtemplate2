@@ -1,10 +1,10 @@
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
-from django.test import SimpleTestCase, RequestFactory
+from django.test import TestCase, RequestFactory
 from django.test.client import Client
 
 
-class BaseTemplateTest(SimpleTestCase):
+class BaseTemplateTest(TestCase):
     client = Client()
 
     def setUp(self):
@@ -24,7 +24,7 @@ class BaseTemplateTest(SimpleTestCase):
         url = reverse('test_page')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'webtemplate_dpaw/base.html')
+        self.assertTemplateUsed(response, 'webtemplate_dbca/base.html')
         self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
         self.assertNotContains(response, 'Log out')  # No 'log out' text.
         self.assertContains(response, '<title>Test page</title>')
@@ -37,7 +37,7 @@ class BaseTemplateTest(SimpleTestCase):
         url = reverse('test_dbca_page')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'webtemplate_dpaw/base_dbca.html')
+        self.assertTemplateUsed(response, 'webtemplate_dbca/base_dbca.html')
         self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
         self.assertNotContains(response, 'Log out')  # No 'log out' text.
         self.assertContains(response, '<title>Test page</title>')
@@ -68,6 +68,6 @@ class BaseTemplateTest(SimpleTestCase):
         url = reverse('test_internet_page')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'webtemplate_dpaw/base_internet.html')
+        self.assertTemplateUsed(response, 'webtemplate_dbca/base_internet.html')
         self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
         self.assertNotContains(response, 'Log out')  # No 'log out' text.

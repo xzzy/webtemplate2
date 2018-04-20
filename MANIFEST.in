@@ -1,4 +1,4 @@
 include README.rst
 include LICENSE
-recursive-include webtemplate_dpaw/static *
-recursive-include webtemplate_dpaw/templates *
+recursive-include webtemplate_dbca/static *
+recursive-include webtemplate_dbca/templates *

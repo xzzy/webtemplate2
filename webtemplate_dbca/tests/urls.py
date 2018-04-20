@@ -1,8 +1,7 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 from .views import TestPage, TestDBCAPage, TestPage2, TestInternetPage
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^test/$', TestPage.as_view(), name='test_page'),
     url(r'^test-dbca/$', TestDBCAPage.as_view(), name='test_dbca_page'),
     url(r'^test2/$', TestPage2.as_view(), name='test_page_2'),
@@ -10,4 +9,4 @@ urlpatterns = patterns(
     # We need the following named URLs to render the base template.
     url(r'^login/$', TestPage.as_view(), name='login'),
     url(r'^logout/$', TestPage.as_view(), name='logout'),
-)
+]
