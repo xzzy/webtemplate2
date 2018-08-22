@@ -9,11 +9,11 @@
         <meta name="description" content="{{ page_description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block polyfill_js %}
-        <script async src="//static.dbca.wa.gov.au/static/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script async src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
         {% endblock %}
         <!-- CSS styling blocks -->
         {% block base_style %}
-        <link rel="stylesheet" type="text/css" href="//static.dbca.wa.gov.au/static/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
         {% endblock %}
         {% block extra_style %}
@@ -92,8 +92,8 @@
 
         <!-- JavaScript blocks -->
         {% block base_js %}
-        <script src="//static.dbca.wa.gov.au/static/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="//static.dbca.wa.gov.au/static/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
         {% endblock %}
         {% block extra_js %}{% endblock %}
     </body>
