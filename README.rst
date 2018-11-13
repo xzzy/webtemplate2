@@ -28,8 +28,7 @@ Installation
 Included CSS and JavaScript
 ===========================
 
-The base template currently includes the following CSS and JavaScript assets
-(served via the Department's internal mirror of `CDNJS`_):
+The base template currently includes the following CSS and JavaScript assets:
 
 #. Modernizr (HTML5 polyfills)
 #. Bootstrap 3 (CSS & JS)
@@ -98,7 +97,7 @@ To include a right-aligned copyright line in the footer area::
         <div class="row">
             <div class="col-xs-12">
                 <hr>
-                <p class="pull-right">&copy; 2015 Department of Parks and Wildlife</p>
+                <p class="pull-right">&copy; Department of Biodiversity, Conservation and Attractions</p>
             </div>
         </div>
     </div>
