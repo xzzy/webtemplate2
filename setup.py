@@ -7,9 +7,9 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     README = readme.read()
 
 install_requires = [
-    'Django>=1.11',
+    'Django>=2.0',
 ]
-version = ('0.6.0')
+version = ('1.0.0')
 
 setup(
     name='webtemplate-dbca',
@@ -30,16 +30,14 @@ setup(
     keywords=['django', 'html', 'template'],
     classifiers=[
         'Framework :: Django',
-        'Framework :: Django :: 1.11',
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
+        'Framework :: Django :: 2.2',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',

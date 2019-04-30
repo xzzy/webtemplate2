@@ -110,7 +110,13 @@ and ``navbar_links`` blocks to be empty::
     {% block navbar_button %}{% endblock %}
     {% block navbar_links %}{% endblock %}
 
+Development
+===========
+
+Create a virtualenv and install local requirements using `python setup.py -q install`
+
+Run unit tests using `python runtests.py`
+
 .. _Department: http://www.dbca.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com
 .. _Bootstrap 3: https://getbootstrap.com
-.. _CDNJS: https://cdnjs.com
