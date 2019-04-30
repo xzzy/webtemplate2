@@ -8,10 +8,10 @@ branches:
   only:
     - master
 env:
-	- DJANGO_VERSION=2.0
-	- DJANGO_VERSION=2.1
-	- DJANGO_VERSION=2.2
+  - DJANGO_VERSION=2.0
+  - DJANGO_VERSION=2.1
+  - DJANGO_VERSION=2.2
 install:
   - pip install -q Django==$DJANGO_VERSION
 script:
-    - python runtests.py
+  - python runtests.py
