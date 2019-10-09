@@ -36,3 +36,14 @@ class TestInternetPage(TemplateView):
         context['page_description'] = 'Meta tag page description'
         context['site_title'] = 'SITE TITLE'
         return context
+
+
+class TestB4Page(TemplateView):
+    template_name = 'webtemplate_dbca/base_b4.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(TestB4Page, self).get_context_data(**kwargs)
+        context['page_title'] = 'Test page'
+        context['page_description'] = 'Meta tag page description'
+        context['site_title'] = 'SITE TITLE'
+        return context

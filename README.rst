@@ -12,6 +12,9 @@ The project also contains functional examples of **login** and
 The base template is based upon `HTML5 Boilerplate`_, and includes the
 `Bootstrap 3`_ CSS framework.
 
+The base_b4 template is based upon `HTML5 Boilerplate`_, and includes the
+`Bootstrap 4`_ CSS framework.
+
 Installation
 ============
 
@@ -28,10 +31,10 @@ Installation
 Included CSS and JavaScript
 ===========================
 
-The base template currently includes the following CSS and JavaScript assets:
+The base/base_b4 templates include the following CSS and JavaScript assets:
 
 #. Modernizr (HTML5 polyfills)
-#. Bootstrap 3 (CSS & JS)
+#. Bootstrap 3 or 4 (CSS & JS)
 #. jQuery (DOM traversal, etc.)
 
 Additional styling can be included using the ``extra_style`` or ``extra_js``
@@ -67,6 +70,7 @@ In addition, a number of context variables are defined:
 
 - ``page_title`` - used to populate the page **<title>** tags.
 - ``site_title`` - used to populate the projects's title in the top navbar.
+- ``site_acronym`` - used to populate a shorter title in the navbar (B4 template).
 
 Context variables should be passed to templates in every view.
 
@@ -120,3 +124,4 @@ Run unit tests using `python runtests.py`
 .. _Department: http://www.dbca.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com
 .. _Bootstrap 3: https://getbootstrap.com
+.. _Bootstrap 4: https://getbootstrap.com

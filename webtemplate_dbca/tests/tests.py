@@ -71,3 +71,13 @@ class BaseTemplateTest(TestCase):
         self.assertTemplateUsed(response, 'webtemplate_dbca/base_internet.html')
         self.assertContains(response, '<a id="id_a_login" href="/login/">Log in</a>')
         self.assertNotContains(response, 'Log out')  # No 'log out' text.
+
+    def test_base_b4_template_render(self):
+        """Test that the base_b4 template renders with expected content.
+        """
+        url = reverse('test_page_b4')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'webtemplate_dbca/base_b4.html')
+        self.assertContains(response, '<a class="nav-link" id="id_a_login" href="/login/">Log in</a>')
+        self.assertContains(response, '<title>Test page</title>')
