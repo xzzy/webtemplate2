@@ -51,6 +51,14 @@ You can also overide the ``base_style`` and ``base_js`` blocks completely to
 use different CSS or JS libraries. Note that you will also need to replace the
 ``top_navbar`` block contents if you replace the base Bootstrap CSS & JS.
 
+The version of jQuery which is loaded in the base is by default a slimmed-down
+minimal version of the library. To include a different specific version, override
+the ``jquery_version`` block. Example::
+
+    {% block jquery_version %}
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    {% endblock %}
+
 Template blocks
 ===============
 
@@ -74,8 +82,10 @@ In addition, a number of context variables are defined:
 
 Context variables should be passed to templates in every view.
 
-Examples
-========
+Bootstrap 3 examples
+====================
+
+The following examples apply to the ``base.html`` template.
 
 To populate the main content area with a narrow left sidebar and content
 area that fills the whole screen width and will collapse elegantly on
@@ -100,12 +110,25 @@ To include a right-aligned copyright line in the footer area::
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <hr>
                 <p class="pull-right">&copy; Department of Biodiversity, Conservation and Attractions</p>
             </div>
         </div>
     </div>
     {% endblock %}
+
+A similar result to the above using the ``base_b4.html`` template::
+
+	{% block page_footer %}
+	<footer class="footer mt-auto py-3">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<small class="float-right">&copy; Department of Biodiversity, Conservation and Attractions</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+	{% endblock %}
 
 To include no navigation links in the top navbar and to prevent the automatic
 "navbar button" from showing on narrow displays, overide the ``navbar_button``
