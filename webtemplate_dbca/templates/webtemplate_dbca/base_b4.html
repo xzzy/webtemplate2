@@ -14,11 +14,11 @@
         <!-- CSS styling blocks -->
         {% block base_style %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<style>
-		body {
-			padding-top: 76px;
-		}
-		</style>
+        <style>
+        body {
+            padding-top: 76px;
+        }
+        </style>
         {% endblock %}
         {% block extra_style %}{% endblock %}
         {% block favicon %}
@@ -33,57 +33,57 @@
         <![endif]-->
 
         {% block top_navbar %}
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand d-block d-sm-none" href="/">
                 {{ site_acronym }}
             </a>
             <a class="navbar-brand d-none d-sm-block" href="/">
-				{% block navbar_logo %}
+                {% block navbar_logo %}
                 <img class="d-inline-block" src="{% static 'img/dbca_logo_sml.png' %}" height="50">
-				{% endblock %}
-				{% block navbar_site_title %}
+                {% endblock %}
+                {% block navbar_site_title %}
                 {{ site_title }}
-				{% endblock %}
+                {% endblock %}
             </a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					{% block navbar_links %}
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link 1<span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link 2</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-					</li>
-					<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Menu
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action 1</a>
-						<a class="dropdown-item" href="#">Action 2</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Action 3</a>
-					</div><!-- .dropdown-menu -->
-					</li>
-					{% block navbar_auth %}
-					{% if not user.is_authenticated %}
-					<li class="nav-item">
-						<a class="nav-link" id="id_a_login" href="{% url 'login' %}">Log in</a>
-					</li>
-					{% endif %}
-					{% endblock %}<!-- /navbar_auth -->
-					{% endblock %}<!-- /navbar_links -->
-				</ul><!-- .navbar-nav -->
-			</div><!-- #navbarSupportedContent -->
-		</nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {% block navbar_links %}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 1<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Action 3</a>
+                    </div><!-- .dropdown-menu -->
+                    </li>
+                    {% block navbar_auth %}
+                    {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="id_a_login" href="{% url 'login' %}">Log in</a>
+                    </li>
+                    {% endif %}
+                    {% endblock %}<!-- /navbar_auth -->
+                </ul><!-- .navbar-nav -->
+                {% endblock %}<!-- /navbar_links -->
+            </div><!-- #navbarSupportedContent -->
+        </nav>
         {% endblock %}<!-- /top_navbar -->
 
         {% block page_content %}{% endblock %}
