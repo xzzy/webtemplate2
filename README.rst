@@ -22,7 +22,7 @@ Installation
 #. Add ``'webtemplate_dbca'`` to ``INSTALLED_APPS``.
 #. Ensure that the ``staticfiles`` application is included and configured
    correctly.
-#. Ensure that you have defined the following named URLs: ``login`` and
+#. (Optional) Ensure that you have defined the following named URLs: ``login`` and
    ``logout`` (this requirement can be overriden, see below).
 #. Extend the included base template by placing the following at the head
    of your own templates: ``{% extends "webtemplate_dbca/base.html" %}``
@@ -72,7 +72,10 @@ content of your project. The main template content blocks are as follows:
 
 Note that the ``navbar_auth`` block contains ``{% url %}`` templatetags with
 named URLs called *login* and *logout*. If this is not required or
-inappropriate for your project, simply override the ``navbar_auth`` block.
+inappropriate for your project, simply override the ``navbar_auth`` block
+in a base template like so::
+
+    {% block navbar_auth %}{% endblock %}
 
 In addition, a number of context variables are defined:
 
@@ -81,6 +84,58 @@ In addition, a number of context variables are defined:
 - ``site_acronym`` - used to populate a shorter title in the navbar (B4 template).
 
 Context variables should be passed to templates in every view.
+
+Bootstrap 4 examples
+====================
+
+The following examples apply to the ``base_b4.html`` template.
+
+To extend the base template with an optional row to display alert messages plus
+a shaded footer div, try the following (further page content is then injected to
+the ``page_content_inner`` block)::
+
+    {% extends "webtemplate_dbca/base_b4.html" %}
+
+    {% block extra_style %}
+    <style>
+        .footer {background-color: lightgrey}
+    </style>
+    {% endblock %}
+
+    {% block page_content %}
+        <div class="container-fluid">
+            <!-- Messages  -->
+            {% if messages %}
+            <div class="row">
+                <div class="col">
+                    {% for message in messages %}
+                    <div class="alert{% if message.tags %} alert-{{ message.tags }}{% endif %}">
+                        {{ message|safe }}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="row">
+                <div class="col">
+                    {% block page_content_inner %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block page_footer %}
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <small class="float-right">&copy; Department of Biodiversity, Conservation and Attractions</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock page_footer %}
 
 Bootstrap 3 examples
 ====================
@@ -116,20 +171,6 @@ To include a right-aligned copyright line in the footer area::
     </div>
     {% endblock %}
 
-A similar result to the above using the ``base_b4.html`` template::
-
-	{% block page_footer %}
-	<footer class="footer mt-auto py-3">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12">
-					<small class="float-right">&copy; Department of Biodiversity, Conservation and Attractions</small>
-				</div>
-			</div>
-		</div>
-	</footer>
-	{% endblock %}
-
 To include no navigation links in the top navbar and to prevent the automatic
 "navbar button" from showing on narrow displays, overide the ``navbar_button``
 and ``navbar_links`` blocks to be empty::
@@ -146,5 +187,5 @@ Run unit tests using `python runtests.py`
 
 .. _Department: http://www.dbca.wa.gov.au
 .. _HTML5 Boilerplate: https://html5boilerplate.com
-.. _Bootstrap 3: https://getbootstrap.com
-.. _Bootstrap 4: https://getbootstrap.com
+.. _Bootstrap 3: https://getbootstrap.com/docs/3.3/
+.. _Bootstrap 4: https://getbootstrap.com/docs/4.5/
