@@ -9,14 +9,15 @@ import django
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 # Minimal Django settings to provide an auth-ready project, plus staticfiles.
 DEFAULT_SETTINGS = dict(
-    INSTALLED_APPS=(
+    SECRET_KEY = 'foobar',
+    INSTALLED_APPS = (
         'django.contrib.auth',
         'django.contrib.contenttypes',
         'django.contrib.sessions',
         'django.contrib.staticfiles',
         'webtemplate_dbca',
     ),
-    DATABASES={
+    DATABASES = {
         'default': {'ENGINE': 'django.db.backends.sqlite3'}
     },
     MIDDLEWARE = (
@@ -25,8 +26,8 @@ DEFAULT_SETTINGS = dict(
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.contrib.auth.middleware.AuthenticationMiddleware',
     ),
-    ROOT_URLCONF='webtemplate_dbca.tests.urls',
-    STATIC_URL='/static/',
+    ROOT_URLCONF = 'webtemplate_dbca.tests.urls',
+    STATIC_URL = '/static/',
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
