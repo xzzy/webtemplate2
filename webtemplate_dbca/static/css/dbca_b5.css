@@ -22,11 +22,16 @@
    border-bottom: 1px solid #e7e7e7;
    position: relative;
    min-height: 50px;
+}
+
+.gov_top_spacer {
    margin-bottom: 20px;
 }
+
 .oldgov_b5_nav ul {
     list-style:none;
 }
+
 .oldgov_b5_nav li a {
     float: left;
     height: 50px;
@@ -38,10 +43,10 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
 }
+
 .oldgov_b5_nav_brand {
     font-size: 18px !important;
 }
-
 
 .caret-above-menu {
         position: absolute;
