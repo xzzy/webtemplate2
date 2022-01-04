@@ -170,7 +170,6 @@
         {% block main_menu %}
 
                     <div class='gov_b5_nav'>
-                    
                         <div class='container'>
                             <div class='row'>
                                <div class='col-sm-12'>
@@ -198,6 +197,8 @@
                                                  {% endblock %}
                                                 </ul>
                                                 <ul class="navbar-nav navbar-right" >
+                                                  {% block menu_items_right %}
+						 
                                                   {% if request.user.is_authenticated %}
                                                  <li class="nav-item">
                                                      <a class="nav-link" href="#">
@@ -237,14 +238,16 @@
 							  {% endblock %}
                                                    </ul>
                                                  </li>
-                    
                                                {% endif %}
+					       {% endblock %}
+					       {% block menu_items2_right %}
+
+					       {% endblock %}
                                                </ul>
                                              </div>
                                            </div>
                                          </nav>
                                       </div>
-                    
                                   </div>
                               </div>
                     
