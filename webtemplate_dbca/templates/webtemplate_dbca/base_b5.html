@@ -168,16 +168,14 @@
 
 
         {% block main_menu %}
-
                     <div class='gov_b5_nav'>
                         <div class='container'>
                             <div class='row'>
                                <div class='col-sm-12'>
-                    
                                          <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                            <div class="container-fluid">
                                              {% block menu_items_left_brand %}
-                                             <a class="navbar-brand" href="#"><img src="/static/img/pwl_icon.png">Home</a>
+					     <a class="navbar-brand" href="{% url 'home'%}"><img src="{% if template_group == 'parksv2' %}/static/img/parkstay_icon_v2.png{% else %}/static/img/pwl_icon.png{% endif %}">Home</a>
                                              {% endblock %}
                                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                                                <span class="navbar-toggler-icon"></span>
@@ -185,20 +183,11 @@
                                              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                                  {% block menu_items_left %}
-                                                 <li class="nav-item">
-                                                   <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                                 </li>
-                                                 <li class="nav-item">
-                                                   <a class="nav-link" href="#">Link</a>
-                                                 </li>
-                                                 <li class="nav-item">
-                                                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                                                 </li>
+						    {% include 'webtemplate_dbca/includes/primary_menu.html' %}
                                                  {% endblock %}
                                                 </ul>
                                                 <ul class="navbar-nav navbar-right" >
                                                   {% block menu_items_right %}
-						 
                                                   {% if request.user.is_authenticated %}
                                                  <li class="nav-item">
                                                      <a class="nav-link" href="#">
@@ -225,14 +214,14 @@
 							      {% block menu_extra_dropdown_top %}
 							      {% endblock %}
                                                               {% if request.user.is_staff %}
-                                                              <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a></li>
+							            {% include 'webtemplate_dbca/includes/staff_menu.html' %}
                                                               {% block menu_extra_dropdown_staff_top %}
-
+                                                                    {% include 'webtemplate_dbca/includes/staff_menu_extras.html' %}
 							      {% endblock %}
 							      {% endif %}
                                                               <li><hr class="dropdown-divider"></li>
 							      {% block menu_extra_dropdown_bottom %}
-
+							            {% include 'webtemplate_dbca/includes/menu_bottom.html' %}
 							      {% endblock %}
                                                               <li><a class="dropdown-item" href="{% url 'logout' %}?next=/">Logout</a></li>
 							  {% endblock %}
