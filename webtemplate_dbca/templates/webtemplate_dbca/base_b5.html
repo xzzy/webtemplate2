@@ -121,6 +121,32 @@
                        </div>
                    </div>
 
+                  {% elif template_group == 'parkswildlife' %}
+
+                  <div class='parks_bg_banner'>
+                       <div class='container'>
+                       <div class="" style='background-color: FFF;  z-index: 2;'>
+                               <div style='padding: 20px;'>
+                                   <div class="row">
+                                       <div class="col-lg-3">
+                                               <h1 id="site-title" class="site-logo">
+                                                  <a href="{% url 'home'%}">
+                                                     <img src="/static/img/logo-park-stay-trunc.gif" alt="Department of Parks and Wildlife - Park Stay" class="img-responsive"/>
+                                                  </a>
+                                               </h1>
+                                       </div>
+				       <div class="col-lg-9">
+					     <h1 id="site-title hide-sm" class="site-logo" style="color: white; text-align: left">
+                                             {% block template_title %}
+                                                 This is a Test header
+					     {% endblock %}
+					     </h1>
+				       </div>
+                               </div>
+                           </div>
+                       </div>
+                       </div>
+                   </div>
 
                   {% elif template_group == 'parksv2' %}
 
