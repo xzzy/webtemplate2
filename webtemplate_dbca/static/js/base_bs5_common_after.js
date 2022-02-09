@@ -1,5 +1,6 @@
 var chevron_toggle = {
 	init: function() { 
+	       $(".chevron-toggle").attr("onclick", "").unbind("click");
                $('.chevron-toggle').each(function(i, obj) {
                        var collapsed_id = $(this).data('bs-target');
                        var collapsed_status = $(collapsed_id).css('display');  
