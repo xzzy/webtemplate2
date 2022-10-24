@@ -230,10 +230,10 @@
                                              {% block menu_items_left_brand %}
 					     <a class="navbar-brand" href="{% url 'home'%}"><img src="{% if template_group == 'parksv2' %}/static/img/parkstay_icon_v2.png{% else %}/static/img/pwl_icon.png{% endif %}">Home</a>
                                              {% endblock %}
-                                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerTop" aria-controls="navbarTogglerTop" aria-expanded="false" aria-label="Toggle navigation">
                                                <span class="navbar-toggler-icon"></span>
                                              </button>
-                                             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                             <div class="collapse navbar-collapse" id="navbarTogglerTop">
                                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                                  {% block menu_items_left %}
 						    {% include 'webtemplate_dbca/includes/primary_menu.html' %}
