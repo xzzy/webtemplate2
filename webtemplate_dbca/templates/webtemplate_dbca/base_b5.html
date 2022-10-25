@@ -234,12 +234,12 @@
                                                <span class="navbar-toggler-icon"></span>
                                              </button>
                                              <div class="collapse navbar-collapse" id="navbarTogglerTop">
-                                               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                               <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarTogglerTopLeft">
                                                  {% block menu_items_left %}
 						    {% include 'webtemplate_dbca/includes/primary_menu.html' %}
                                                  {% endblock %}
                                                 </ul>
-                                                <ul class="navbar-nav navbar-right" >
+                                                <ul class="navbar-nav navbar-right" id="navbarTogglerTopRight" >
                                                   {% block menu_items_right %}
                                                   {% if request.user.is_authenticated %}
                                                  <li class="nav-item">
@@ -261,7 +261,7 @@
                                                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                      Options
                                                    </a>
-                                                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+                                                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown" id="navbarTogglerTopDropdown">
                                                      <span class='caret-above-menu hidden-sm' style=''><i class="bi bi-caret-up-fill fas ml-2"></i></span>
 						          {% block menu_dropdown %}
 							      {% block menu_extra_dropdown_top %}
