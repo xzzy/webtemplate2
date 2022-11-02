@@ -266,7 +266,7 @@
 						          {% block menu_dropdown %}
 							      {% block menu_extra_dropdown_top %}
 							      {% endblock %}
-                                                              {% if request.session.is_staff %}
+                                                              {% if request.session.user_obj.is_staff %}
 							            {% include 'webtemplate_dbca/includes/staff_menu.html' %}
                                                               {% block menu_extra_dropdown_staff_top %}
                                                                     {% include 'webtemplate_dbca/includes/staff_menu_extras.html' %}
