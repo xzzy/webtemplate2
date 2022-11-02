@@ -9,7 +9,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 install_requires = [
     'Django>=2.2',
 ]
-version = ('2.0.1')
+version = ('2.0.2')
 
 setup(
     name='webtemplate-dbca',
@@ -21,10 +21,10 @@ setup(
     include_package_data=True,
     author='Ashley Felton',
     author_email='asi@dbca.wa.gov.au',
-    maintainer='Ashley Felton',
+    maintainer='Jason Moore',
     maintainer_email='asi@dbca.wa.gov.au',
     license='Apache License, Version 2.0',
-    url='https://github.com/dbca-wa/webtemplate',
+    url='https://github.com/dbca-wa/webtemplate2',
     description='Base HTML templates for DBCA Django projects',
     long_description=README,
     keywords=['django', 'html', 'template'],
