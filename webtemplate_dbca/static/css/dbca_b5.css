@@ -77,3 +77,35 @@
     background: #01b9bc;
 }
 
+/* Park Passes Banner */
+
+.park-passes-bg-banner {
+    padding:0px;
+    height:100%;
+    background-color: #003e52;
+}
+
+.park-passes-bg-banner .wrapper {
+    padding: 30px 48px 32px 24px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.park-passes-bg-banner .wrapper section {
+    padding-right: 32px;
+}
+
+.park-passes-bg-banner .site-title {
+    padding: 18px 0 10px 0;
+    margin-bottom: 0px;
+}
+
+.park-passes-bg-banner .site-title h1 {
+    color:#eee;
+    margin:0px;
+}
+
+/* Park Passes Banner  End */
