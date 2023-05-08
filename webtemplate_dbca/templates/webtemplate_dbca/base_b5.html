@@ -47,7 +47,13 @@
         </title>
     </head>
     <body>
-
+        {% block development_header %}
+            {% if DJANGO_SETTINGS.EMAIL_INSTANCE == 'DEV' or DJANGO_SETTINGS.EMAIL_INSTANCE == 'UAT' or DJANGO_SETTINGS.EMAIL_INSTANCE == 'TEST'  %}
+            <div class="col-lg-12 p-3 bg-danger text-white text-center fs-5" >
+                THIS IS A DEVELOPMENT ENVIRONMENT
+            </div>
+            {% endif %}
+        {% endblock %}
  
         {% block header_top_menu %}
 	      {% if request.user.is_authenticated %}
@@ -89,6 +95,7 @@
         {% endblock %}
 
         {% block main_header %}
+
 	          {% if template_group == 'ria' %}
                     <div class='ria_bg_banner'>
                          <div class='container'>
