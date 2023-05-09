@@ -49,8 +49,8 @@
     <body>
         {% block development_header %}
             {% if DJANGO_SETTINGS.EMAIL_INSTANCE == 'DEV' or DJANGO_SETTINGS.EMAIL_INSTANCE == 'UAT' or DJANGO_SETTINGS.EMAIL_INSTANCE == 'TEST'  %}
-            <div class="col-lg-12 p-3 bg-danger text-white text-center fs-5" >
-                THIS IS A DEVELOPMENT ENVIRONMENT
+            <div class="col-lg-12 p-3 bg-danger text-white text-center fs-6" >
+                DEVELOPMENT: FOR TESTING ONLY DO NOT USE
             </div>
             {% endif %}
         {% endblock %}
