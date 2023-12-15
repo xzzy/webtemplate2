@@ -14,7 +14,7 @@
     "twitter-bootstrap": "^2.1.1",
     "twbs": "0.0.6",
     "bootstrap": "5.0.2",
-    "bootstrap-icons": "1.8.1",
+    "bootstrap-icons": "1.11.2",
     "@popperjs/core": "2.11.2"
   },
   "engines": {
