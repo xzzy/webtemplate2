@@ -402,16 +402,19 @@
 
         {% block footer %}
 
-        <div class="row">
-            <div class="col-lg-12 " >
-                  <div style='border-top: 1px solid #f1f0f0; font-size:5px; margin-top: 10px;'>
-			&nbsp;
-		  </div>
-                  <div class='container'>
-                    <small>&copy; Department of Biodiversity, Conservation and Attractions</small>
-                </div>
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+        <div class="container">
+            <div class="row" style='height:100px'>
+                <div class="col-lg-12 " >
+                    <div class="row">
+                    <div class="col-lg-12" style='border-top: 1px solid #f1f0f0; font-size:5px; margin-top: 10px;'>
+            </div>
+                    <div class="col-lg-12" style="word-wrap: break-word;">
+                        &copy; Department of Biodiversity, Conservation and Attractions
+                    </div>
+            </div>
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
         {% endblock footer %}
 </body>
 
