@@ -16,3 +16,8 @@
     position: absolute;
     margin-left: -20px;
 }
+
+.nav-link.active {
+    background-color: #ecedef;
+    border-radius: 5px;
+}
