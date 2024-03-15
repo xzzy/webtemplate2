@@ -42,7 +42,7 @@
 
         <title>
             {% block title %}
-                Department of Biodiversity, Conservation and Attractions
+                {% if template_title %}{{ template_title }} - {% endif %}Department of Biodiversity, Conservation and Attractions
             {% endblock %}
         </title>
     </head>
