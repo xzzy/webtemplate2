@@ -395,13 +395,14 @@
         {% block messages %}
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        {% for message in messages %}
-                            <div class=" message|bootstrap_message_classes <<<---FIX alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&#215;</button>
-                                {{ message|safe }}
-                            </div>
-                        {% endfor %}
+                    <div class="col-md-12">                        
+			  <BR>
+			  {% for message in messages %}
+			  <div class="alert {{ message.tags }} alert-dismissible shadow fade show" role="alert">      
+			      {{ message | safe }}
+			      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			  </div>
+			  {% endfor %}		    
                     </div>
                 </div>
             </div>
