@@ -116,3 +116,39 @@
 }
 
 /* Park Passes Banner  End */
+
+/* Wildlife Licensing Banner */
+
+.wl-header {
+    background: #529b6b;
+}
+
+.wl-banner {
+    height: 100px;
+    padding-top: 10px;
+    background-image: url("/static/img/wl/banner.png");
+    background-repeat: no-repeat;
+}
+
+.wl-banner img {
+    vertical-align: top;
+}
+
+.wl-banner div {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .wl-banner h1 {
+        display: none;
+    }
+}
+
+.wl-banner h1 {
+    margin-top: 15px;
+    font-size: 50px;
+    color: #fcb13f;
+}
+
+/* Wildlife Licensing Banner End */
