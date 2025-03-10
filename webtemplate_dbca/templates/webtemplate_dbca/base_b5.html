@@ -375,13 +375,8 @@
 							      {% block menu_extra_dropdown_bottom %}
 							            {% include 'webtemplate_dbca/includes/menu_bottom.html' %}
 							      {% endblock %}
-                                                        <li>
-                                                            <form action="{% url 'logout' %}?next=/" method="post">
-                                                            {% csrf_token %}
-                                                            <button class="btn-link dropdown-item" type="submit">Logout</button>
-                                                            </form>
-                                                        </li>
-                                							  {% endblock %}
+                                                              <li><a class="dropdown-item" href="{% url 'logout' %}?next=/">Logout</a></li>
+							  {% endblock %}
                                                    </ul>
                                                  </li>
                                                {% endif %}
